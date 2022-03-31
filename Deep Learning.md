@@ -86,11 +86,11 @@ Regularization
 
 在Cost Function上添加了正则化项，能降低模型的过拟合程度
 
-![](E:\QZ\summary-for-public\image\6be93ac4537bd2f2ec37702542d2cd5.png)
+![](https://github.com/kangjmbu/summary-for-public/tree/main/image/6be93ac4537bd2f2ec37702542d2cd5.png)
 
 L1正则化对所有参数的惩罚力度都一样，可以让一部分权重变为零，因此产生稀疏模型，能够去除某些特征（权重为0则等效于去除）。
 
-![](E:\QZ\summary-for-public\image\7df360dc93c0f6a17a102d2fbcb089f.png)
+![](https://github.com/kangjmbu/summary-for-public/tree/main/image/7df360dc93c0f6a17a102d2fbcb089f.png)
 
 L2正则化减少了权重的固定比例，使权重平滑。L2正则化不会使权重变为0（不会产生稀疏模型），所以选择了更多的特征。
 
@@ -142,7 +142,7 @@ Layer Normalization(RNN, NLP)：
 
 一个batch中的每一个句子内部的K个词向量是有上下文关联的，所以做层归一化更加合理，又因为不同句子间的词向量关联性不大，批归一化不适用于NLP任务。
 
-![](E:\QZ\summary-for-public\image\2f9c1060ec908b62b88f168539cbf68.png)
+![](https://github.com/kangjmbu/summary-for-public/tree/main/image/2f9c1060ec908b62b88f168539cbf68.png)
 
 
 
@@ -164,7 +164,7 @@ Adam（Adaptive momentum）是一种自适应动量的随机优化方法（A met
 
 Adam 优化算法需要做偏差修正（除以 1-b1 / 1-b2)
 
-![](E:\QZ\summary-for-public\image\4ae203419d2ce1aa1de72ebdea924a8.png)
+![](https://github.com/kangjmbu/summary-for-public/tree/main/image/4ae203419d2ce1aa1de72ebdea924a8.png)
 
 mt：动量，根号vt：自适应调节学习率
 
@@ -178,5 +178,5 @@ Adagrad、RMSProp、Adam
 
 使用比较广的是SGDM和Adam
 
-![](E:\QZ\summary-for-public\image\e8b3481c61aa8051242563e63cc657d.png)
+![](https://github.com/kangjmbu/summary-for-public/tree/main/image/e8b3481c61aa8051242563e63cc657d.png)
 
