@@ -1,4 +1,4 @@
-### 判别模型和生成模型
+判别模型和生成模型
 
 ------
 
@@ -90,7 +90,13 @@ Regularization
 
 L1正则化对所有参数的惩罚力度都一样，可以让一部分权重变为零，因此产生稀疏模型，能够去除某些特征（权重为0则等效于去除）。
 
-![](https://github.com/kangjmbu/summary-for-public/tree/main/image/7df360dc93c0f6a17a102d2fbcb089f.png)
+
+
+
+
+![](kangjmbu\summary-for-public\image\7df360dc93c0f6a17a102d2fbcb089f.png)
+
+
 
 L2正则化减少了权重的固定比例，使权重平滑。L2正则化不会使权重变为0（不会产生稀疏模型），所以选择了更多的特征。
 
