@@ -76,6 +76,57 @@ Relu激活函数（优点，如何理解其稀疏激活性） （109页）
 
 
 
+# 激活函数
+
+1. Sigmoid**
+
+![](https://github.com/kangjmbu/summary-for-public/raw/main/image/QQ截图20220330232218.png)
+
+优点：平滑、易于求导。
+
+缺点：
+
+1. 激活函数计算量大（在正向传播和反向传播中都包含幂运算和除法）；
+2. 反向传播求误差梯度时，求导涉及除法；
+3. Sigmoid导数取值范围是[0, 0.25]，由于神经网络反向传播时的“链式反应”，很容易就会出现梯度消失的情况。例如对于一个10层的网络， 根据![[公式]](https://www.zhihu.com/equation?tex=0.25%5E%7B10%7D%5Capprox0.000000954)，第10层的误差相对第一层卷积的参数![[公式]](https://www.zhihu.com/equation?tex=W_1)的梯度将是一个非常小的值，这就是所谓的“梯度消失”。
+4. Sigmoid的输出不是0均值（即zero-centered）；这会导致后一层的神经元将得到上一层输出的非0均值的信号作为输入，随着网络的加深，会改变数据的原始分布。
+
+
+
+
+
+
+
+
+
+2.**tanh**
+
+![](https://github.com/kangjmbu/summary-for-public/raw/main/image/QQ截图20220330232447.png)
+
+
+
+相比Sigmoid函数，
+
+1. tanh的输出范围时(-1, 1)，解决了Sigmoid函数的不是zero-centered输出问题；
+2. 幂运算的问题仍然存在；
+3. tanh导数范围在(0, 1)之间，相比sigmoid的(0, 0.25)，梯度消失（gradient vanishing）问题会得到缓解，但仍然还会存在。
+
+
+
+3.**RELU**
+
+![](https://github.com/kangjmbu/summary-for-public/raw/main/image/QQ截图20220330232741.png)
+
+
+
+
+
+**ReLU作为激活函数的特点：**
+
+- 相比Sigmoid和tanh，ReLU摒弃了复杂的计算，提高了运算速度。
+- 解决了梯度消失问题，收敛速度快于Sigmoid和tanh函数，但要防范ReLU的梯度爆炸
+- 容易得到更好的模型，但也要防止训练中出现模型‘Dead’情况。
+
 # L1 (Lasso)和 L2正则化(Ridge)
 
 惩罚力度，惩罚模型的复杂度
